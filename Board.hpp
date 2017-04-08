@@ -10,15 +10,18 @@ class Board {
 private:
     double boardLength ;
     double boardWidth;
-    double** boardPtr;
+    int boardPtr;
 
 public:
+    Board();
+
     Board(double length, double width);
+
     double getLength();
     double getWidth();
 
-    void setLength();
-    void setWidth();
+    void setLength(double newLength);
+    void setWidth(double newWidth);
 
 };
 
