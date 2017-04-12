@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Board.hpp"
 
 int main() {
     double height = 10;
@@ -14,6 +15,14 @@ int main() {
     std::cout << "Please provide us with the dimensions on how tall / wide you'd like the farm to be.\n"
               << "(Separate your dimensions with a space in between): " << std::endl;
 
+	Board gameBoard();
+
+	for (int i = 0; i < 20; i++)
+	{
+		gameBoard.move();
+		gameBoard.markBoard();
+		gameBoard.printBoard();
+	}
 
 
     return 0;

@@ -6,23 +6,38 @@
 #define PROJECT_1_BOARD_HPP
 
 
+#include "Ant.hpp"
+
 class Board {
 private:
-    double boardLength ;
-    double boardWidth;
-    int boardPtr;
+	int boardLength ;
+    int boardWidth;
+    char ** boardPtr;
+	int*  tempX;
+	int*  tempY;
+	char* tempSpace;
+	char* tempDir;
+
+	Ant gameAnt;
+
 
 public:
     Board();
 
-    Board(double length, double width);
+    Board(int length, int width);
 
     double getLength();
     double getWidth();
 
-    void setLength(double newLength);
-    void setWidth(double newWidth);
+	void setLength(int newLength);
+    void setWidth(int newWidth);
+	char getSpace(int x, int y);
 
+	void printBoard();
+
+	void move();
+
+	void markBoard();
 };
 
 
